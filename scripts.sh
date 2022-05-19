@@ -29,15 +29,14 @@ CUDA_VISIBLE_DEVICES=6 python train_teacher.py \
 
 # loss = [cross_entropy, mdca]
 
-CUDA_VISIBLE_DEVICES=4 python train_student.py \
---dataset cifar100 \
---model resnet20 \
---teacher resnet56 \
---checkpoint checkpoint/cifar100_pretrained/resnet56_cross_entropy.pth \
+CUDA_VISIBLE_DEVICES=7 python train_student.py \
+--dataset cifar10 \
+--model resnet18 \
+--teacher resnet152 \
+--checkpoint checkpoint/cifar10/15-May_resnet152_cross_entropy/model_best.pth \
 --lr 0.1 \
 --lr-decay-factor 0.1 \
 --wd 5e-4 \
 --train-batch-size 128 \
 --schedule-steps 100 150 \
---epochs 200 \
---exp_name ce_teacher
+--epochs 200

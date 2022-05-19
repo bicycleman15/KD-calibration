@@ -21,29 +21,29 @@ def save_checkpoint(state, is_best, checkpoint='checkpoint', filename='checkpoin
 def create_save_path(args, mode = "teacher"):
 
     if mode == "student":
-        ans_str = f"_{args.model}_{mode}_{args.loss}"
+        ans_str = f"_teacher={str(args.checkpoint).split('/')[-2]}_student={args.model}_temp={args.temp}_dw={args.dw}"
     else:
         ans_str = f"_{args.model}_{args.loss}"
 
-    if args.loss == "FLSD":
-        ans_str += f"_gamma={args.gamma}"
-        return ans_str
-    
-    if "focal_loss" in args.loss or "FL" in args.loss:
-        ans_str += f"_gamma={args.gamma}"
-    
-    if "LS" in args.loss:
-        ans_str += f"_alpha={args.alpha}"
+        if args.loss == "FLSD":
+            ans_str += f"_gamma={args.gamma}"
+            return ans_str
+        
+        if "focal_loss" in args.loss or "FL" in args.loss:
+            ans_str += f"_gamma={args.gamma}"
+        
+        if "LS" in args.loss:
+            ans_str += f"_alpha={args.alpha}"
 
-    if "MDCA" in args.loss:
-        ans_str += f"_beta={args.beta}"
-        return ans_str
+        if "MDCA" in args.loss:
+            ans_str += f"_beta={args.beta}"
+            return ans_str
 
-    if "DCA" in args.loss or "MMCE" in args.loss:
-        ans_str += f"_beta={args.beta}"
+        if "DCA" in args.loss or "MMCE" in args.loss:
+            ans_str += f"_beta={args.beta}"
 
-    if "mdca" in args.loss or "FL+MDCA" in args.loss:
-        ans_str += f"_beta={args.beta}_gamma={args.gamma}"
+        if "mdca" in args.loss or "FL+MDCA" in args.loss:
+            ans_str += f"_beta={args.beta}_gamma={args.gamma}"
 
     if args.exp_name:
         ans_str += f"_{args.exp_name}"

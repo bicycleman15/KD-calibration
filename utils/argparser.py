@@ -9,6 +9,13 @@ def parse_args():
                         help='number of data loading workers (default: 4)')
     parser.add_argument('--seed', default=100, type=int,
                         help='seed to use')
+
+    parser.add_argument('--temp', default=20, type=float,
+                        help='temperature to use for KD')
+    parser.add_argument('--dw', default=0.5, type=float,
+                        help='distilling weight to use for KD')
+
+
     parser.add_argument('--imbalance', default=0.02, type=float,
                         help='Imbalance to use in long tailed CIFAR10/100')
     parser.add_argument('--delta', default=0.25, type=float,
