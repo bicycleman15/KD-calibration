@@ -2,27 +2,31 @@
 teachers = {
     "cifar10": {
         "resnet152" : [
-            "checkpoint/cifar10/15-May_resnet152_cross_entropy/model_best.pth", # unCalibrated
-            "checkpoint/cifar10/15-May_resnet152_FL+MDCA_gamma=1.0_beta=1.0/model_best.pth" # Calibrated
+            "checkpoint/cifar10/16-May_resnet152_cross_entropy/model_best.pth", # unCalibrated
+            "checkpoint/cifar10/16-May_resnet152_FL+MDCA_gamma=1.0_beta=10.0/model_best.pth" # Calibrated
         ],
         "resnet110" : [
-            "checkpoint/cifar10/16-May_resnet110_NLL+MDCA_beta=1.0/best_calibration.pth"
+            "checkpoint/cifar10/16-May_resnet110_cross_entropy/model_best.pth", # unCalibrated
+            "checkpoint/cifar10/16-May_resnet110_FL+MDCA_gamma=1.0_beta=10.0/model_best.pth" # Calibrated
         ]
     },
     "cifar100" : {
         "resnet152" : [
-
+            "checkpoint/cifar100/17-May_resnet152_cross_entropy/model_best.pth", # unCalibrated
+            "checkpoint/cifar100/17-May_resnet152_NLL+MDCA_beta=10.0/model_best.pth" # Calibrated
         ],
         "resnet110" : [
+            "checkpoint/cifar100/17-May_resnet110_cross_entropy/model_best.pth", # unCalibrated
+            "checkpoint/cifar100/17-May_resnet110_NLL+MDCA_beta=5.0/model_best.pth" # Calibrated
         ]
     }
 }
 
-students = ["resnet18", "resnet34"]
-datasets = ["cifar10", "cifar100"]
+students = ["resnet18"] #, "resnet34"]
+datasets = ["cifar10"] # , "cifar100"]
 
 # please confirm this @neelabh
-temps = [1, 5, 10, 20, 30, 50, 100, 250, 500, 1000]
+temps = [0.1, 0.5, 1, 5, 10, 20, 30, 50, 100, 250, 500, 1000]
 dws = [0.25, 0.5, 0.75]
 
 idx = 0

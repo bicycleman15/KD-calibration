@@ -185,5 +185,5 @@ if __name__ == "__main__":
         "checkpoint_test_ece" : [ece_score]
     }
     df =  pd.DataFrame(df)
-    save_path = os.path.join("results", "student_metrics.csv")
+    save_path = os.path.join("results", "student_new_metrics.csv")
     df.to_csv(save_path, mode='a', index=False, header=(not os.path.exists(save_path)))
