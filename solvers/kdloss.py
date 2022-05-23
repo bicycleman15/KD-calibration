@@ -8,8 +8,8 @@ class SoftCrossEntropy(nn.Module):
         super().__init__()
 
     def forward(self, preds, soft_targets):
-        preds = torch.log_softmax(preds, dim=1)
-        return torch.mean(torch.sum(-soft_targets * preds, dim=1))
+        logit_pred = torch.log_softmax(preds, dim=1)
+        return torch.mean(torch.sum(-soft_targets * logit_pred, dim=1))
 
 class VanillaKD(nn.Module):
     def __init__(self, temp=20.0, distil_weight=0.5) -> None:
