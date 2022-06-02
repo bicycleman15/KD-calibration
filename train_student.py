@@ -43,6 +43,11 @@ if __name__ == "__main__":
     classes_name_list = dataset_classname_dict[args.dataset]
     
     # prepare model
+    if not os.path.isfile(args.checkpoint):
+        checkpoint_splits = args.checkpoint.split("/")
+        checkpoint_splits[0] = "mount"
+        checkpoint_modified = "/".join(checkpoint_splits)
+        args.checkpoint = checkpoint_modified
     logging.info(f"Using teacher model : {args.teacher}")
     logging.info(f"loading teacher model from: {args.checkpoint}")
     teacher = model_dict[args.teacher](num_classes=num_classes)
@@ -185,5 +190,5 @@ if __name__ == "__main__":
         "checkpoint_test_ece" : [ece_score]
     }
     df =  pd.DataFrame(df)
-    save_path = os.path.join("results", "student_new_metrics.csv")
+    save_path = os.path.join("results", "student_metrics.csv")
     df.to_csv(save_path, mode='a', index=False, header=(not os.path.exists(save_path)))

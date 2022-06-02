@@ -20,6 +20,16 @@ python train_teacher.py \
 --epochs 200 \
 --loss cross_entropy
 
+# train convnet
+python train_teacher.py \
+--dataset cifar10 \
+--model convnet \
+--lr 0.001 \
+--wd 1e-4 \
+--train-batch-size 128 \
+--epochs 200 \
+--loss cross_entropy
+
 
 # try to run on all configurations for (gamma, beta) pairs gamma in [1,2,3] beta in [1,5,10]
 CUDA_VISIBLE_DEVICES=7 python train_teacher.py \
