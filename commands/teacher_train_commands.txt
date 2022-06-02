@@ -1,0 +1,32 @@
+python train_teacher.py --dataset cifar10 --model resnet50 --lr 0.1 --lr-decay-factor 0.1 --wd 5e-4 --train-batch-size 128 --schedule-steps 100 150 --epochs 200 --loss cross_entropy
+python train_teacher.py --dataset cifar10 --model resnet50 --lr 0.1 --lr-decay-factor 0.1 --wd 5e-4 --train-batch-size 128 --schedule-steps 100 150 --epochs 200 --loss NLL+MDCA --beta 1
+python train_teacher.py --dataset cifar10 --model resnet50 --lr 0.1 --lr-decay-factor 0.1 --wd 5e-4 --train-batch-size 128 --schedule-steps 100 150 --epochs 200 --loss NLL+MDCA --beta 5
+python train_teacher.py --dataset cifar10 --model resnet50 --lr 0.1 --lr-decay-factor 0.1 --wd 5e-4 --train-batch-size 128 --schedule-steps 100 150 --epochs 200 --loss NLL+MDCA --beta 10
+python train_teacher.py --dataset cifar10 --model resnet50 --lr 0.1 --lr-decay-factor 0.1 --wd 5e-4 --train-batch-size 128 --schedule-steps 100 150 --epochs 200 --loss focal_loss --gamma 1
+python train_teacher.py --dataset cifar10 --model resnet50 --lr 0.1 --lr-decay-factor 0.1 --wd 5e-4 --train-batch-size 128 --schedule-steps 100 150 --epochs 200 --loss FL+MDCA --gamma 1 --beta 1
+python train_teacher.py --dataset cifar10 --model resnet50 --lr 0.1 --lr-decay-factor 0.1 --wd 5e-4 --train-batch-size 128 --schedule-steps 100 150 --epochs 200 --loss FL+MDCA --gamma 1 --beta 5
+python train_teacher.py --dataset cifar10 --model resnet50 --lr 0.1 --lr-decay-factor 0.1 --wd 5e-4 --train-batch-size 128 --schedule-steps 100 150 --epochs 200 --loss FL+MDCA --gamma 1 --beta 10
+python train_teacher.py --dataset cifar10 --model resnet50 --lr 0.1 --lr-decay-factor 0.1 --wd 5e-4 --train-batch-size 128 --schedule-steps 100 150 --epochs 200 --loss focal_loss --gamma 2
+python train_teacher.py --dataset cifar10 --model resnet50 --lr 0.1 --lr-decay-factor 0.1 --wd 5e-4 --train-batch-size 128 --schedule-steps 100 150 --epochs 200 --loss FL+MDCA --gamma 2 --beta 1
+python train_teacher.py --dataset cifar10 --model resnet50 --lr 0.1 --lr-decay-factor 0.1 --wd 5e-4 --train-batch-size 128 --schedule-steps 100 150 --epochs 200 --loss FL+MDCA --gamma 2 --beta 5
+python train_teacher.py --dataset cifar10 --model resnet50 --lr 0.1 --lr-decay-factor 0.1 --wd 5e-4 --train-batch-size 128 --schedule-steps 100 150 --epochs 200 --loss FL+MDCA --gamma 2 --beta 10
+python train_teacher.py --dataset cifar10 --model resnet50 --lr 0.1 --lr-decay-factor 0.1 --wd 5e-4 --train-batch-size 128 --schedule-steps 100 150 --epochs 200 --loss focal_loss --gamma 3
+python train_teacher.py --dataset cifar10 --model resnet50 --lr 0.1 --lr-decay-factor 0.1 --wd 5e-4 --train-batch-size 128 --schedule-steps 100 150 --epochs 200 --loss FL+MDCA --gamma 3 --beta 1
+python train_teacher.py --dataset cifar10 --model resnet50 --lr 0.1 --lr-decay-factor 0.1 --wd 5e-4 --train-batch-size 128 --schedule-steps 100 150 --epochs 200 --loss FL+MDCA --gamma 3 --beta 5
+python train_teacher.py --dataset cifar10 --model resnet50 --lr 0.1 --lr-decay-factor 0.1 --wd 5e-4 --train-batch-size 128 --schedule-steps 100 150 --epochs 200 --loss FL+MDCA --gamma 3 --beta 10
+python train_teacher.py --dataset cifar100 --model resnet50 --lr 0.1 --lr-decay-factor 0.1 --wd 5e-4 --train-batch-size 128 --schedule-steps 100 150 --epochs 200 --loss cross_entropy
+python train_teacher.py --dataset cifar100 --model resnet50 --lr 0.1 --lr-decay-factor 0.1 --wd 5e-4 --train-batch-size 128 --schedule-steps 100 150 --epochs 200 --loss NLL+MDCA --beta 1
+python train_teacher.py --dataset cifar100 --model resnet50 --lr 0.1 --lr-decay-factor 0.1 --wd 5e-4 --train-batch-size 128 --schedule-steps 100 150 --epochs 200 --loss NLL+MDCA --beta 5
+python train_teacher.py --dataset cifar100 --model resnet50 --lr 0.1 --lr-decay-factor 0.1 --wd 5e-4 --train-batch-size 128 --schedule-steps 100 150 --epochs 200 --loss NLL+MDCA --beta 10
+python train_teacher.py --dataset cifar100 --model resnet50 --lr 0.1 --lr-decay-factor 0.1 --wd 5e-4 --train-batch-size 128 --schedule-steps 100 150 --epochs 200 --loss focal_loss --gamma 1
+python train_teacher.py --dataset cifar100 --model resnet50 --lr 0.1 --lr-decay-factor 0.1 --wd 5e-4 --train-batch-size 128 --schedule-steps 100 150 --epochs 200 --loss FL+MDCA --gamma 1 --beta 1
+python train_teacher.py --dataset cifar100 --model resnet50 --lr 0.1 --lr-decay-factor 0.1 --wd 5e-4 --train-batch-size 128 --schedule-steps 100 150 --epochs 200 --loss FL+MDCA --gamma 1 --beta 5
+python train_teacher.py --dataset cifar100 --model resnet50 --lr 0.1 --lr-decay-factor 0.1 --wd 5e-4 --train-batch-size 128 --schedule-steps 100 150 --epochs 200 --loss FL+MDCA --gamma 1 --beta 10
+python train_teacher.py --dataset cifar100 --model resnet50 --lr 0.1 --lr-decay-factor 0.1 --wd 5e-4 --train-batch-size 128 --schedule-steps 100 150 --epochs 200 --loss focal_loss --gamma 2
+python train_teacher.py --dataset cifar100 --model resnet50 --lr 0.1 --lr-decay-factor 0.1 --wd 5e-4 --train-batch-size 128 --schedule-steps 100 150 --epochs 200 --loss FL+MDCA --gamma 2 --beta 1
+python train_teacher.py --dataset cifar100 --model resnet50 --lr 0.1 --lr-decay-factor 0.1 --wd 5e-4 --train-batch-size 128 --schedule-steps 100 150 --epochs 200 --loss FL+MDCA --gamma 2 --beta 5
+python train_teacher.py --dataset cifar100 --model resnet50 --lr 0.1 --lr-decay-factor 0.1 --wd 5e-4 --train-batch-size 128 --schedule-steps 100 150 --epochs 200 --loss FL+MDCA --gamma 2 --beta 10
+python train_teacher.py --dataset cifar100 --model resnet50 --lr 0.1 --lr-decay-factor 0.1 --wd 5e-4 --train-batch-size 128 --schedule-steps 100 150 --epochs 200 --loss focal_loss --gamma 3
+python train_teacher.py --dataset cifar100 --model resnet50 --lr 0.1 --lr-decay-factor 0.1 --wd 5e-4 --train-batch-size 128 --schedule-steps 100 150 --epochs 200 --loss FL+MDCA --gamma 3 --beta 1
+python train_teacher.py --dataset cifar100 --model resnet50 --lr 0.1 --lr-decay-factor 0.1 --wd 5e-4 --train-batch-size 128 --schedule-steps 100 150 --epochs 200 --loss FL+MDCA --gamma 3 --beta 5
+python train_teacher.py --dataset cifar100 --model resnet50 --lr 0.1 --lr-decay-factor 0.1 --wd 5e-4 --train-batch-size 128 --schedule-steps 100 150 --epochs 200 --loss FL+MDCA --gamma 3 --beta 10
