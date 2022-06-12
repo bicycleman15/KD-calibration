@@ -36,7 +36,7 @@ dataloader_dict = {
     "mendley" : mendleyloader,
     "pacs" : pacs_corruptedloader,
     "mnist" : mnistloader,
-    "imagenet" : imagenetloader,
+    "tiny_imagenet" : imagenetloader,
     "im_cifar10" : imbalanced_cifarloader
 }
 
@@ -52,7 +52,7 @@ dataset_dict = {
     "mendley" : mendleydatasets,
     "pacs" : pacs_corrupteddatasets,
     "mnist" : mnistdatasets,
-    "imagenet" : imagenetdatasets,
+    "tiny_imagenet" : imagenetdatasets,
 }
 
 corrupted_dataset_dict = {
@@ -67,7 +67,7 @@ dataset_nclasses_dict = {
     "mendley" : 2,
     "pacs" : 7,
     "mnist" : 10,
-    "imagenet" : 200,
+    "tiny_imagenet" : 200,
     "im_cifar10" : 10
 }
 
@@ -96,7 +96,7 @@ dataset_classname_dict = {
 
     "mnist" : [f"{i}" for i in range(10)],
 
-    "imagenet" : [f"{i}" for i in range(200)],
+    "tiny_imagenet" : [f"{i}" for i in range(200)],
 
     "im_cifar10" : ['airplane', 'automobile', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck']
 }
@@ -108,5 +108,5 @@ dataset_transform_dict = {
     "mendley" : mendleytransforms,
     "pacs" : pacs_corruptedtransforms,
     "mnist" : mnisttransforms,
-    "imagenet" : imagenettransforms,
+    "tiny_imagenet" : imagenettransforms,
 }

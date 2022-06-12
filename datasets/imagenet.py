@@ -42,7 +42,7 @@ class TinyImageNet(Dataset):
     in_memory: bool
         Set to True if there is enough memory (about 5G) and want to minimize disk IO overhead.
     """
-    def __init__(self, root='data/tiny-imagenet-200', split='train', transform=None, target_transform=None, in_memory=False):
+    def __init__(self, root='~/scratch/Data/tiny-imagenet-200', split='train', transform=None, target_transform=None, in_memory=False):
         self.root = os.path.expanduser(root)
         self.split = split
         self.transform = transform

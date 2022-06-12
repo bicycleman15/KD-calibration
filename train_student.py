@@ -20,6 +20,9 @@ from time import localtime, strftime
 import logging
 
 if __name__ == "__main__":
+
+    # input size does not change
+    torch.backends.cudnn.benchmark = True
     
     args = parse_args()
 

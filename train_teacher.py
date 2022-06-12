@@ -19,6 +19,9 @@ import logging
 from utils import Logger
 
 if __name__ == "__main__":
+
+    # input size does not change
+    torch.backends.cudnn.benchmark = True
     
     args = parse_args()
 
